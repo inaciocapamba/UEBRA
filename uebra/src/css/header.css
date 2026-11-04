@@ -1,0 +1,59 @@
+:root {
+    --header-bg: #ffffff;
+    --header-text: #1f2937;
+    --header-border: #e5e7eb;
+    --header-accent: #c8102e;
+}
+
+/* Quando o <html> tem a classe "dark" (adicionada pelo useEffect) */
+.dark {
+    --header-bg: #111827;
+    --header-text: #f3f4f6;
+    --header-border: #374151;
+    --header-accent: #ef4458;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+}
+
+.header-logo {
+    text-decoration: none;
+    color: var(--header-text);
+    font-weight: 700;
+}
+
+.header-logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    background: var(--header-accent);
+    color: #fff;
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--header-text);
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.header-link:hover,
+.header-link.active {
+    color: var(--header-accent);
+    border-bottom-color: var(--header-accent);
+}

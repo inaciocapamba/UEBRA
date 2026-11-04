@@ -1,0 +1,108 @@
+:root{
+    --footer-bg: #f9fafb;
+    --footer-text: #1f2937;
+    --footer-muted: #6b7280;
+    --footer-border: #e5e7eb;
+    --footer-accent: #c8102e;
+}
+
+.dark {
+    --footer-bg: #1f2937;
+    --footer-text: #f3f4f6;
+    --footer-muted: #9ca3af;
+    --footer-border: #374151;
+    --footer-accent: #ef4458;
+}
+
+.footer{
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    border-top: 1px solid var(--footer-border);
+}
+
+.footer-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.footer-logo-icon{
+    background-color: var(--footer-accent);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.footer-logo-text{
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.footer-description{
+    max-width: 20rem;
+    margin: 1rem 0 1.25rem;
+    font-size: 0.875rem;
+    color: var(--footer-muted);
+}
+
+.footer-social{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--footer-border);
+    border-radius: 0.5rem;
+    color: var(--footer-muted);
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer-social:hover{
+    background: var(--footer-border);
+    color: var(--footer-text);
+}
+
+.footer-title{
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.footer-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    color: var(--footer-muted);
+}
+
+.footer-link{
+    text-decoration: none;
+    color: var(--footer-muted);
+    transition: color 0.2s;
+}
+
+.footer-link:hover{
+    color: var(--footer-text);
+}
+
+.footer-contact-icon{
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: var(--footer-accent);
+}
+
+.footer-bottom{
+    padding: 1.25rem 1rem;
+    border-top: 1px solid var(--footer-border);
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--footer-muted);
+}

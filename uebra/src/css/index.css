@@ -1,0 +1,229 @@
+:root {
+    --idx-bg: #ffffff;
+    --idx-card: #ffffff;
+    --idx-section-alt: #f9fafb;
+    --idx-text: #1f2937;
+    --idx-muted: #6b7280;
+    --idx-border: #e5e7eb;
+    --idx-primary: #c8102e;
+    --idx-ocean: #0e7490;
+    --idx-terra: #b45309;
+    --idx-sun: #facc15;
+    --idx-sun-text: #713f12;
+}
+
+.dark {
+    --idx-bg: #111827;
+    --idx-card: #1f2937;
+    --idx-section-alt: #1a2332;
+    --idx-text: #f3f4f6;
+    --idx-muted: #9ca3af;
+    --idx-border: #374151;
+    --idx-primary: #ef4458;
+    --idx-ocean: #22d3ee;
+    --idx-terra: #fb923c;
+}
+
+.section-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+}
+
+.hero{
+    background:
+        radial-gradient(circle at 20% 20%, rgba(200, 16, 46, 0.12), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(250, 204, 21, 0.18), transparent 40%),
+        var(--idx-bg);
+    color: var(--idx-text);
+}
+
+.hero .section-content{
+    max-width: 48rem;
+}
+
+.hero-badge{
+    padding: 0.375rem 1rem;
+    border: 1px solid var(--idx-border);
+    border-radius: 999px;
+    background: var(--idx-card);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--idx-muted);
+}
+
+.hero-badge i{
+    font-size: 0.8rem;
+    color: var(--idx-sun);
+}
+
+.hero-title{
+    margin: 1.5rem 0 0;
+    font-size: 2.25rem;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.text-gradient{
+    background: linear-gradient(90deg, var(--idx-primary), var(--idx-terra));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text{
+    max-width: 40rem;
+    margin: 1.5rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--idx-muted);
+}
+
+.hero-buttons{
+    margin-top: 2.25rem;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+}
+
+.btn-primary{
+    background-color: var(--idx-primary);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(200, 16, 46, 0.25);
+}
+
+.btn-outline{
+    border: 1px solid var(--idx-border);
+    background: var(--idx-card);
+    color: var(--idx-text);
+}
+
+.btn-sun{
+    margin-top: 2rem;
+    background: var(--idx-sun);
+    color: var(--idx-sun-text);
+    font-weight: 700;
+}
+
+/* ----------- DESTAQUES ---------*/
+
+.highlights{
+    background: var(--idx-section-alt);
+    border-top: 1px solid var(--idx-border);
+    color: var(--idx-text);
+}
+
+.highlights-header{
+    max-width: 40rem;
+    margin: 0 auto 2.5rem;
+}
+
+.section-title{
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.section-subtitle{
+    margin: 0.75rem 0 0;
+    color: var(--idx-muted);
+}
+
+.card{
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--idx-border);
+    border-radius: 1rem;
+    background: var(--idx-card);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.card-icon-primary { color: var(--idx-primary); background: rgba(200, 16, 46, 0.1); }
+.card-icon-ocean   { color: var(--idx-ocean);   background: rgba(14, 116, 144, 0.1); }
+.card-icon-terra   { color: var(--idx-terra);   background: rgba(180, 83, 9, 0.1); }
+.card-icon-sun     { color: var(--idx-sun-text); background: rgba(250, 204, 21, 0.3); }
+
+.card-title{
+    margin: 1.25rem 0 0 ;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card-text{
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--idx-muted);
+}
+
+.cta-section{
+    padding: 4rem 0;
+}
+
+.cta{
+    padding: 3.5rem;
+    background-color: var(--idx-primary);
+    border-radius: 1.5rem;
+    color: #fff;
+}
+
+.cta-title{
+    max-width: 40rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cta-text{
+    max-width: 36rem;
+    margin: 1rem auto 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* --------- TELAS MAIORES -------*/
+
+@media (max-width: 576px){
+    .hero-title {font-size: 3rem;}
+    .section-title { font-size: 2rem;}
+    .cta-title {font-size: 1.875rem;}
+    .cta {padding: 3.5rem 3rem;}
+}
+
+@media (min-width: 992px) {
+    .hero-title { font-size: 3.75rem; }
+    .hero .section-content { padding: 8rem 1rem; }
+}
+
+@media (max-width: 575px) {
+    .hero-buttons .btn { width: 100%; }
+}

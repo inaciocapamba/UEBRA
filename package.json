@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "primeflex": "^4.0.0",
+    "primeicons": "^8.0.2",
+    "primereact": "^11.2.0",
+    "react-router-dom": "^7.18.4"
+  }
+}
