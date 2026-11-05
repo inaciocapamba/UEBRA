@@ -1,0 +1,189 @@
+:root {
+    --apoio-bg: #ffffff;
+    --apoio-card: #ffffff;
+    --apoio-text: #1f2937;
+    --apoio-muted: #6b7280;
+    --apoio-border: #e5e7eb;
+    --apoio-primary: #c8102e;
+    --apoio-terra: #b45309;
+}
+
+.dark {
+    --apoio-bg: #111827;
+    --apoio-card: #1f2937;
+    --apoio-text: #f3f4f6;
+    --apoio-muted: #9ca3af;
+    --apoio-border: #374151;
+    --apoio-primary: #ef4458;
+    --apoio-terra: #fb923c;
+}
+
+.apoio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.apoio-hero {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(200, 16, 46, 0.12), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(250, 204, 21, 0.18), transparent 40%),
+        var(--apoio-bg);
+    color: var(--apoio-text);
+}
+
+.apoio-hero-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.apoio-title {
+    max-width: 42rem;
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.apoio-gradient {
+    background: linear-gradient(90deg, var(--apoio-primary), var(--apoio-terra));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.apoio-subtitle {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--apoio-muted);
+}
+
+.apoio-body {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    color: var(--apoio-text);
+}
+
+.apoio-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--apoio-border);
+    border-radius: 1rem;
+    background: var(--apoio-card);
+}
+
+.apoio-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: rgba(180, 83, 9, 0.1);
+    color: var(--apoio-terra);
+    font-size: 1.4rem;
+}
+
+.apoio-card-title {
+    margin: 1.25rem 0 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.apoio-card-text {
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--apoio-muted);
+}
+
+.apoio-bottom {
+    margin-top: 2.5rem;
+}
+
+.apoio-help,
+.apoio-join {
+    height: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.apoio-help {
+    background: var(--apoio-primary);
+    color: #fff;
+}
+
+.apoio-help-icon {
+    font-size: 1.75rem;
+}
+
+.apoio-help-title,
+.apoio-join-title {
+    margin: 1rem 0 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.apoio-help-text {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    opacity: 0.85;
+}
+
+.apoio-help-list {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.apoio-join {
+    border: 1px solid var(--apoio-border);
+    background: var(--apoio-card);
+}
+
+.apoio-join-title {
+    margin-top: 0;
+}
+
+.apoio-join-text {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--apoio-muted);
+}
+
+.apoio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--apoio-primary);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(200, 16, 46, 0.25);
+    transition: transform 0.2s;
+}
+
+.apoio-btn:hover {
+    transform: scale(1.02);
+}
+
+/* ---------- TELAS MAIORES ---------- */
+@media (min-width: 576px) {
+    .apoio-hero-content {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .apoio-title { font-size: 2.25rem; }
+    .apoio-subtitle { font-size: 1.125rem; }
+    .apoio-help,
+    .apoio-join { padding: 2.5rem; }
+}

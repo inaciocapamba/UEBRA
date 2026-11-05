@@ -1,0 +1,155 @@
+:root {
+    --sobre-bg: #ffffff;
+    --sobre-card: #ffffff;
+    --sobre-text: #1f2937;
+    --sobre-muted: #6b7280;
+    --sobre-border: #e5e7eb;
+    --sobre-primary: #c8102e;
+    --sobre-terra: #b45309;
+}
+
+.dark {
+    --sobre-bg: #111827;
+    --sobre-card: #1f2937;
+    --sobre-text: #f3f4f6;
+    --sobre-muted: #9ca3af;
+    --sobre-border: #374151;
+    --sobre-primary: #ef4458;
+    --sobre-terra: #fb923c;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+
+.sobre-hero {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(200, 16, 46, 0.12), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(250, 204, 21, 0.18), transparent 40%),
+        var(--sobre-bg);
+    color: var(--sobre-text);
+}
+
+.sobre-hero-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+}
+
+.sobre-title {
+    max-width: 42rem;
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sobre-gradient {
+    background: linear-gradient(90deg, var(--sobre-primary), var(--sobre-terra));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.sobre-subtitle {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--sobre-muted);
+}
+
+.sobre-body {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    color: var(--sobre-text);
+}
+
+.sobre-card {
+    height: 100%;
+    padding: 1.75rem;
+    border: 1px solid var(--sobre-border);
+    border-radius: 1rem;
+    background: var(--sobre-card);
+}
+
+.sobre-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: rgba(200, 16, 46, 0.1);
+    color: var(--sobre-primary);
+    font-size: 1.4rem;
+}
+
+.sobre-card-title {
+    margin: 1.25rem 0 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.sobre-card-text {
+    margin: 0.75rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--sobre-muted);
+}
+
+
+.sobre-cta {
+    margin-top: 3.5rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--sobre-border);
+    border-radius: 1.5rem;
+    background: var(--sobre-card);
+}
+
+.sobre-cta-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.sobre-cta-text {
+    max-width: 36rem;
+    margin: 0.75rem auto 0;
+    font-size: 0.875rem;
+    color: var(--sobre-muted);
+}
+
+.sobre-btn {
+    display: inline-flex;
+    margin-top: 1.75rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    background: var(--sobre-primary);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(200, 16, 46, 0.25);
+    transition: transform 0.2s;
+}
+
+.sobre-btn:hover {
+    transform: scale(1.02);
+}
+
+/* ---------- TELAS MAIORES ---------- */
+@media (min-width: 576px) {
+    .sobre-hero-content {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .sobre-title { font-size: 2.25rem; }
+    .sobre-subtitle { font-size: 1.125rem; }
+    .sobre-cta { padding: 3rem; }
+}

@@ -1,0 +1,202 @@
+:root {
+    --eventos-bg: #ffffff;
+    --eventos-card: #ffffff;
+    --eventos-text: #1f2937;
+    --eventos-muted: #6b7280;
+    --eventos-border: #e5e7eb;
+    --eventos-primary: #c8102e;
+    --eventos-terra: #b45309;
+    --eventos-sun-text: #713f12;
+}
+
+.dark {
+    --eventos-bg: #111827;
+    --eventos-card: #1f2937;
+    --eventos-text: #f3f4f6;
+    --eventos-muted: #9ca3af;
+    --eventos-border: #374151;
+    --eventos-primary: #ef4458;
+    --eventos-terra: #fb923c;
+    --eventos-sun-text: #fde68a;
+}
+
+.eventos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.eventos-hero {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(200, 16, 46, 0.12), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(250, 204, 21, 0.18), transparent 40%),
+        var(--eventos-bg);
+    color: var(--eventos-text);
+}
+
+.eventos-hero-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.eventos-title {
+    max-width: 42rem;
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.eventos-gradient {
+    background: linear-gradient(90deg, var(--eventos-primary), var(--eventos-terra));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.eventos-subtitle {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--eventos-muted);
+}
+
+.eventos-body {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    color: var(--eventos-text);
+}
+
+.eventos-card {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--eventos-border);
+    border-radius: 1rem;
+    background: var(--eventos-card);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.eventos-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.eventos-date {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+    background: var(--eventos-primary);
+    color: #fff;
+}
+
+.eventos-date-day {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.eventos-date-month {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.eventos-info {
+    min-width: 0;
+}
+
+.eventos-tag {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    border-radius: 999px;
+    background: rgba(250, 204, 21, 0.3);
+    color: var(--eventos-sun-text);
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+.eventos-card-title {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.eventos-card-text {
+    margin: 0.375rem 0 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--eventos-muted);
+}
+
+.eventos-meta {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--eventos-muted);
+}
+
+.eventos-meta i {
+    font-size: 0.8rem;
+    color: var(--eventos-primary);
+}
+
+
+.eventos-cta {
+    margin-top: 3.5rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--eventos-border);
+    border-radius: 1.5rem;
+    background: var(--eventos-card);
+}
+
+.eventos-cta-icon {
+    font-size: 2rem;
+    color: var(--eventos-primary);
+}
+
+.eventos-cta-title {
+    margin: 1rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.eventos-cta-text {
+    max-width: 36rem;
+    margin: 0.75rem auto 0;
+    font-size: 0.875rem;
+    color: var(--eventos-muted);
+}
+
+.eventos-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    background: var(--eventos-primary);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(200, 16, 46, 0.25);
+    transition: transform 0.2s;
+}
+
+.eventos-btn:hover {
+    transform: scale(1.02);
+}
+
+/* ---------- TELAS MAIORES ---------- */
+@media (min-width: 576px) {
+    .eventos-hero-content {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .eventos-title { font-size: 2.25rem; }
+    .eventos-subtitle { font-size: 1.125rem; }
+    .eventos-cta { padding: 3rem; }
+}

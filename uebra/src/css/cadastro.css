@@ -1,0 +1,153 @@
+:root {
+    --cad-bg: #ffffff;
+    --cad-card: #ffffff;
+    --cad-text: #1f2937;
+    --cad-muted: #6b7280;
+    --cad-border: #d1d5db;
+    --cad-primary: #c8102e;
+    --cad-ocean: #0e7490;
+}
+
+.dark {
+    --cad-bg: #111827;
+    --cad-card: #1f2937;
+    --cad-text: #f3f4f6;
+    --cad-muted: #9ca3af;
+    --cad-border: #4b5563;
+    --cad-primary: #ef4458;
+    --cad-ocean: #22d3ee;
+}
+
+.cadastro-page {
+    padding: 4rem 1rem;
+    background: var(--cad-bg);
+    color: var(--cad-text);
+}
+
+.cadastro-box {
+    width: 100%;
+    max-width: 32rem;
+    padding: 2rem;
+    border: 1px solid var(--cad-border);
+    border-radius: 1.5rem;
+    background: var(--cad-card);
+}
+
+.cadastro-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: rgba(200, 16, 46, 0.1);
+    color: var(--cad-primary);
+    font-size: 1.4rem;
+}
+
+
+.cadastro-icon-success {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: rgba(14, 116, 144, 0.1);
+    color: var(--cad-ocean);
+    font-size: 1.75rem;
+}
+
+.cadastro-title {
+    margin: 1.25rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cadastro-text {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--cad-muted);
+}
+
+.cadastro-success-text {
+    max-width: 24rem;
+    margin: 0.75rem auto 0;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+.cadastro-form {
+    margin-top: 2rem;
+}
+
+.cadastro-form label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.cadastro-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--cad-border);
+    border-radius: 0.75rem;
+    background: var(--cad-bg);
+    color: var(--cad-text);
+    font-family: inherit;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.cadastro-input:focus {
+    border-color: var(--cad-primary);
+}
+
+
+.cadastro-btn {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: var(--cad-primary);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(200, 16, 46, 0.25);
+    transition: transform 0.2s;
+}
+
+.cadastro-btn:hover {
+    transform: scale(1.01);
+}
+
+/* TELA DE SUCESSO */
+.cadastro-btn-inline {
+    display: inline-block;
+    width: auto;
+    margin-top: 1.75rem;
+    padding: 0.875rem 1.75rem;
+}
+
+.cadastro-login {
+    margin: 1.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--cad-muted);
+}
+
+.cadastro-link {
+    color: var(--cad-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cadastro-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- TELAS MAIORES ---------- */
+@media (min-width: 576px) {
+    .cadastro-box {
+        padding: 2.5rem;
+    }
+}

@@ -14,6 +14,11 @@ import 'primeflex/primeflex.css';
 import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import Footer from './components/footer';
 import Index from './components/index'
+import Sobre from './components/sobre';
+import Apoio from './components/apoio';
+import Guia from './components/guia';
+import Eventos from './components/eventos';
+import Cadastro from './components/cadastro';
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -27,14 +32,14 @@ const rootRoute = createRootRoute({
   ),
 });
 
-// Uma rota para cada link do menu (páginas provisórias)
+// Rotas
 const pages = [
   { path: '/', component: Index },
-  { path: '/sobre', component: () => <h2>Sobre Nós</h2> },
-  { path: '/guia', component: () => <h2>Guia do Recém-Chegado</h2> },
-  { path: '/eventos', component: () => <h2>Eventos</h2> },
-  { path: '/apoio', component: () => <h2>Apoio & Comunidade</h2> },
-  { path: '/cadastro', component: () => <h2>Cadastrar-se</h2> },
+  { path: '/sobre', component: Sobre },
+  { path: '/guia', component: Guia },
+  { path: '/eventos', component: Eventos },
+  { path: '/apoio', component: Apoio },
+  { path: '/cadastro', component: Cadastro },
 ];
 
 const routes = pages.map((page) =>
