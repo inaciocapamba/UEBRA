@@ -19,6 +19,7 @@ import Apoio from './components/apoio';
 import Guia from './components/guia';
 import Eventos from './components/eventos';
 import Cadastro from './components/cadastro';
+import Entrar from './components/entrar';
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -40,6 +41,7 @@ const pages = [
   { path: '/eventos', component: Eventos },
   { path: '/apoio', component: Apoio },
   { path: '/cadastro', component: Cadastro },
+  { path: '/entrar', component: Entrar },
 ];
 
 const routes = pages.map((page) =>

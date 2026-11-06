@@ -1,0 +1,147 @@
+:root {
+    --entrar-bg: #ffffff;
+    --entrar-card: #ffffff;
+    --entrar-text: #1f2937;
+    --entrar-muted: #6b7280;
+    --entrar-border: #d1d5db;
+    --entrar-primary: #c8102e;
+    --entrar-ocean: #0e7490;
+}
+
+.dark {
+    --entrar-bg: #111827;
+    --entrar-card: #1f2937;
+    --entrar-text: #f3f4f6;
+    --entrar-muted: #9ca3af;
+    --entrar-border: #4b5563;
+    --entrar-primary: #ef4458;
+    --entrar-ocean: #22d3ee;
+}
+
+.entrar-page {
+    padding: 4rem 1rem;
+    background: var(--entrar-bg);
+    color: var(--entrar-text);
+}
+
+.entrar-box {
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+    border: 1px solid var(--entrar-border);
+    border-radius: 1.5rem;
+    background: var(--entrar-card);
+}
+
+.entrar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    background: rgba(200, 16, 46, 0.1);
+    color: var(--entrar-primary);
+    font-size: 1.4rem;
+}
+
+.entrar-title {
+    margin: 1.25rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.entrar-text {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--entrar-muted);
+}
+
+/* ---------- FORMULÁRIO ---------- */
+.entrar-form {
+    margin-top: 2rem;
+}
+
+.entrar-form label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.entrar-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--entrar-border);
+    border-radius: 0.75rem;
+    background: var(--entrar-bg);
+    color: var(--entrar-text);
+    font-family: inherit;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.entrar-input:focus {
+    border-color: var(--entrar-primary);
+}
+
+.entrar-btn {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: var(--entrar-primary);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(200, 16, 46, 0.25);
+    transition: transform 0.2s;
+}
+
+.entrar-btn:hover {
+    transform: scale(1.01);
+}
+
+
+.entrar-notice {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: rgba(14, 116, 144, 0.1);
+    font-size: 0.875rem;
+}
+
+.entrar-notice-title {
+    margin: 0;
+    font-weight: 600;
+}
+
+.entrar-notice-text {
+    margin: 0.25rem 0 0;
+    color: var(--entrar-muted);
+}
+
+
+.entrar-signup {
+    margin: 1.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--entrar-muted);
+}
+
+.entrar-link {
+    color: var(--entrar-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.entrar-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------- TELAS MAIORES ---------- */
+@media (min-width: 576px) {
+    .entrar-box {
+        padding: 2.5rem;
+    }
+}
