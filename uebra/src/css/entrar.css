@@ -139,6 +139,12 @@
     text-decoration: underline;
 }
 
+.entrar-erro {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    color: var(--entrar-primary);
+}
+
 /* ---------- TELAS MAIORES ---------- */
 @media (min-width: 576px) {
     .entrar-box {

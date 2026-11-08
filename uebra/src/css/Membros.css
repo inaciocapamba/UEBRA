@@ -1,0 +1,189 @@
+:root {
+    --mb-bg: #ffffff;
+    --mb-card: #ffffff;
+    --mb-text: #1f2937;
+    --mb-muted: #6b7280;
+    --mb-border: #d1d5db;
+    --mb-primary: #c8102e;
+    --mb-ocean: #0e7490;
+}
+
+.dark {
+    --mb-bg: #111827;
+    --mb-card: #1f2937;
+    --mb-text: #f3f4f6;
+    --mb-muted: #9ca3af;
+    --mb-border: #4b5563;
+    --mb-primary: #ef4458;
+    --mb-ocean: #22d3ee;
+}
+
+.mb-page {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 3rem 1rem 5rem;
+    color: var(--mb-text);
+}
+
+.mb-loading {
+    padding: 4rem 1rem;
+    text-align: center;
+    color: var(--mb-muted);
+}
+
+.mb-title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.mb-subtitle {
+    margin: 0.5rem 0 2rem;
+    font-size: 0.95rem;
+    color: var(--mb-muted);
+}
+
+.mb-section-title {
+    margin: 0 0 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.mb-space {
+    margin-top: 2.5rem;
+}
+
+/* ---------- CARDS ---------- */
+.mb-card {
+    padding: 1.5rem;
+    border: 1px solid var(--mb-border);
+    border-radius: 1rem;
+    background: var(--mb-card);
+}
+
+.mb-card-full {
+    height: 100%;
+}
+
+.mb-card-text {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: var(--mb-muted);
+}
+
+/* ---------- AVISOS ---------- */
+.mb-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.mb-notice-ok {
+    background: rgba(14, 116, 144, 0.12);
+}
+
+.mb-notice-warn {
+    background: rgba(250, 204, 21, 0.25);
+}
+
+.mb-error {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    color: var(--mb-primary);
+}
+
+.mb-success {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    color: var(--mb-ocean);
+}
+
+/* ---------- FORMULÁRIOS ---------- */
+.mb-form label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.mb-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--mb-border);
+    border-radius: 0.75rem;
+    background: var(--mb-bg);
+    color: var(--mb-text);
+    font-family: inherit;
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.mb-input:focus {
+    border-color: var(--mb-primary);
+}
+
+.mb-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ---------- BOTÕES ---------- */
+.mb-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: var(--mb-primary);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.mb-btn:hover {
+    transform: scale(1.02);
+}
+
+.mb-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.mb-btn-inline {
+    margin-top: 1rem;
+}
+
+.mb-btn-small {
+    padding: 0.5rem 1rem;
+    flex-shrink: 0;
+}
+
+.mb-btn-danger {
+    background: transparent;
+    border: 1px solid var(--mb-primary);
+    color: var(--mb-primary);
+}
+
+/* ---------- LINHAS DE LISTA ---------- */
+.mb-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--mb-border);
+}
+
+.mb-row:last-child {
+    border-bottom: none;
+}

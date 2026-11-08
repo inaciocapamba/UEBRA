@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, HeartHandshake, Icon } from "lucide-react";
+import logo from "../assets/logo.png";
 import "../css/footer.css";
 
 const navLinks = [
@@ -31,7 +32,7 @@ function Footer(){
                 {/* Coluna 1: logo, texto e redes sociais */}
                 <div className="col-12 md:col-4">
                     <div className="flex align-items-center gap-2">
-                        <span className="footer-logo-icon">AE</span>
+                        <img src={logo} alt="Logotipo da UEBRA" className="footer-logo-img" />
                         <span className="footer-logo-text">
                             Associação dos Estudantes Angolanos no RJ
                         </span>

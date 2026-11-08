@@ -20,6 +20,11 @@ import Guia from './components/guia';
 import Eventos from './components/eventos';
 import Cadastro from './components/cadastro';
 import Entrar from './components/entrar';
+import { AuthProvider } from './components/AuthContext';
+import RotaProtegida from './components/RotaProtegida';
+import Perfil from './components/Perfil';
+import Grupos from './components/Grupos';
+import Admin from './components/Admin';
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -42,6 +47,9 @@ const pages = [
   { path: '/apoio', component: Apoio },
   { path: '/cadastro', component: Cadastro },
   { path: '/entrar', component: Entrar },
+  { path: '/perfil', component: () => <RotaProtegida><Perfil /></RotaProtegida> },
+  { path: '/grupos', component: () => <RotaProtegida><Grupos /></RotaProtegida> },
+  { path: '/admin', component: () => <RotaProtegida exigir="coordenacao"><Admin /></RotaProtegida> },
 ];
 
 const routes = pages.map((page) =>
@@ -56,6 +64,8 @@ const router = createRouter({ routeTree: rootRoute.addChildren(routes) });
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

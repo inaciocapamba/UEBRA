@@ -26,18 +26,11 @@
     padding: 3rem 1rem;
 }
 
-.footer-logo-icon{
-    background-color: var(--footer-accent);
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
+.footer-logo-img {
+    display: block;
     height: 2.25rem;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    font-weight: 700;
-    font-size: 0.875rem;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer-logo-text{

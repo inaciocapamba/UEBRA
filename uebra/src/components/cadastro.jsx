@@ -1,15 +1,34 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { supabase } from "../supabaseClient";
 import "../css/cadastro.css";
 
 const universities = ["UERJ", "UFRJ", "UFF", "PUC-Rio", "UNIRIO", "IFRJ", "Outra"];
 
 function Cadastro() {
     const [submitted, setSubmitted] = useState(false);
+    const [erro, setErro] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setErro("");
+        const f = Object.fromEntries(new FormData(e.target));
+
+        const { error } = await supabase.auth.signUp({
+            email: f.email,
+            password: f.password,
+            options: {
+                data: {
+                    nome: f.name,
+                    universidade: f.university,
+                    curso: f.course,
+                    whatsapp: f.phone,
+                },
+            },
+        });
+
+        if (error) setErro(error.message);
+        else setSubmitted(true);
     };
 
     return (
@@ -23,9 +42,9 @@ function Cadastro() {
                         </span>
                         <h1 className="cadastro-title">Cadastro recebido!</h1>
                         <p className="cadastro-text cadastro-success-text">
-                            Bem-vindo à família! Nossa equipe entrará em contato em até 48
-                            horas com o kit de boas-vindas e o convite para os grupos da
-                            comunidade.
+                            Bem-vindo à família! Confirme o seu e-mail pelo link que enviamos
+                            e, depois, aguarde a aprovação da coordenação para liberar a área
+                            de membros e os grupos da comunidade.
                         </p>
                         <Link to="/" className="cadastro-btn cadastro-btn-inline">
                             Voltar ao início
@@ -48,6 +67,7 @@ function Cadastro() {
                                     <label htmlFor="name">Nome completo</label>
                                     <input
                                         id="name"
+                                        name="name"
                                         className="cadastro-input"
                                         required
                                         placeholder="Seu nome"
@@ -57,6 +77,7 @@ function Cadastro() {
                                     <label htmlFor="email">E-mail</label>
                                     <input
                                         id="email"
+                                        name="email"
                                         type="email"
                                         className="cadastro-input"
                                         required
@@ -65,10 +86,29 @@ function Cadastro() {
                                 </div>
                             </div>
 
+                            <div className="field">
+                                <label htmlFor="password">Senha</label>
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    className="cadastro-input"
+                                    minLength={8}
+                                    required
+                                    autoComplete="new-password"
+                                    placeholder="Mínimo 8 caracteres"
+                                />
+                            </div>
+
                             <div className="formgrid grid">
                                 <div className="field col-12 sm:col-6">
                                     <label htmlFor="university">Universidade</label>
-                                    <select id="university" className="cadastro-input" required>
+                                    <select
+                                        id="university"
+                                        name="university"
+                                        className="cadastro-input"
+                                        required
+                                    >
                                         <option value="">Selecione</option>
                                         {universities.map((u) => (
                                             <option key={u} value={u}>
@@ -81,6 +121,7 @@ function Cadastro() {
                                     <label htmlFor="course">Curso</label>
                                     <input
                                         id="course"
+                                        name="course"
                                         className="cadastro-input"
                                         required
                                         placeholder="Ex: Engenharia"
@@ -92,11 +133,14 @@ function Cadastro() {
                                 <label htmlFor="phone">WhatsApp (opcional)</label>
                                 <input
                                     id="phone"
+                                    name="phone"
                                     type="tel"
                                     className="cadastro-input"
                                     placeholder="(21) 90000-0000"
                                 />
                             </div>
+
+                            {erro && <p className="cadastro-erro">{erro}</p>}
 
                             <button type="submit" className="cadastro-btn">
                                 Cadastrar-se na Comunidade

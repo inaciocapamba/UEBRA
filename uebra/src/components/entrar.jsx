@@ -1,13 +1,24 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
-import "../css/entrar.css"
+import { Link, useNavigate } from "@tanstack/react-router";
+import { supabase } from "../supabaseClient";
+import "../css/entrar.css";
 
 function Entrar() {
-    const [submitted, setSubmitted] = useState(false);
+    const [erro, setErro] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // impede a página de recarregar
-        setSubmitted(true);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setErro("");
+        const f = Object.fromEntries(new FormData(e.target));
+
+        const { error } = await supabase.auth.signInWithPassword({
+            email: f.email,
+            password: f.password,
+        });
+
+        if (error) setErro("E-mail ou senha incorretos, ou e-mail ainda não confirmado.");
+        else navigate({ to: "/perfil" });
     };
 
     return (
@@ -21,49 +32,40 @@ function Entrar() {
                     Entre para acessar os grupos, eventos e a rede de mentoria.
                 </p>
 
-                {submitted ? (
-                    /* AVISO: área de membros ainda não liberada */
-                    <div className="entrar-notice">
-                        <p className="entrar-notice-title">Quase lá!</p>
-                        <p className="entrar-notice-text">
-                            O acesso à área de membros será liberado em breve. Enquanto
-                            isso, fale conosco pelo e-mail contato@uebra.org.br.
-                        </p>
+                <form className="entrar-form" onSubmit={handleSubmit}>
+                    <div className="field">
+                        <label htmlFor="email">E-mail</label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            className="entrar-input"
+                            autoComplete="email"
+                            required
+                            placeholder="seu@email.com"
+                        />
                     </div>
-                ) : (
-                    /* FORMULÁRIO */
-                    <form className="entrar-form" onSubmit={handleSubmit}>
-                        <div className="field">
-                            <label htmlFor="email">E-mail</label>
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                className="entrar-input"
-                                autoComplete="email"
-                                required
-                                placeholder="seu@email.com"
-                            />
-                        </div>
 
-                        <div className="field">
-                            <label htmlFor="password">Senha</label>
-                            <input
-                                id="password"
-                                name="password"
-                                type="password"
-                                className="entrar-input"
-                                autoComplete="current-password"
-                                required
-                                placeholder="••••••••"
-                            />
-                        </div>
+                    <div className="field">
+                        <label htmlFor="password">Senha</label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            className="entrar-input"
+                            autoComplete="current-password"
+                            required
+                            placeholder="••••••••"
+                        />
+                    </div>
 
-                        <button type="submit" className="entrar-btn">
-                            Entrar
-                        </button>
-                    </form>
-                )}
+                    {/* Mensagem de erro: aparece só quando há erro, logo antes do botão */}
+                    {erro && <p className="entrar-erro">{erro}</p>}
+
+                    <button type="submit" className="entrar-btn">
+                        Entrar
+                    </button>
+                </form>
 
                 <p className="entrar-signup text-center">
                     Ainda não faz parte?{" "}

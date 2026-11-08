@@ -145,6 +145,8 @@
     text-decoration: underline;
 }
 
+.cadastro-erro { margin: 0 0 1rem; font-size: 0.875rem; color: var(--cad-primary); }
+
 /* ---------- TELAS MAIORES ---------- */
 @media (min-width: 576px) {
     .cadastro-box {
