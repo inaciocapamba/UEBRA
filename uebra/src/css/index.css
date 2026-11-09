@@ -30,26 +30,25 @@
     padding: 5rem 1rem;
 }
 
-.hero{
+.hero {
     background:
-        radial-gradient(circle at 20% 20%, rgba(200, 16, 46, 0.12), transparent 40%),
-        radial-gradient(circle at 80% 30%, rgba(250, 204, 21, 0.18), transparent 40%),
-        var(--idx-bg);
-    color: var(--idx-text);
+        linear-gradient(rgba(17, 24, 39, 0.72), rgba(17, 24, 39, 0.72)),
+        url("../assets/bandeira-angola.jpg.jpg") center / cover no-repeat;
+    color: #ffffff;
 }
 
 .hero .section-content{
     max-width: 48rem;
 }
 
-.hero-badge{
-    padding: 0.375rem 1rem;
-    border: 1px solid var(--idx-border);
-    border-radius: 999px;
-    background: var(--idx-card);
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--idx-muted);
+.hero-badge {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.hero-text {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-badge i{
@@ -71,13 +70,13 @@
     color: transparent;
 }
 
-.hero-text{
-    max-width: 40rem;
-    margin: 1.5rem auto 0;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--idx-muted);
+.hero .text-gradient {
+    background: linear-gradient(90deg, #facc15, #fb923c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
+
 
 .hero-buttons{
     margin-top: 2.25rem;

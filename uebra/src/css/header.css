@@ -59,3 +59,8 @@
     color: var(--header-accent);
     border-bottom-color: var(--header-accent);
 }
+
+.header-sidebar {
+    background: var(--header-bg);
+    color: var(--header-text);
+}

@@ -111,7 +111,11 @@ function Header() {
             </div>
 
             {/* Menu mobile */}
-            <Sidebar visible={visible} position="right" onHide={() => setVisible(false)}>
+            <Sidebar
+            className="header-sidebar" 
+            visible={visible} 
+            position="right" 
+            onHide={() => setVisible(false)}>
                 <nav className="flex flex-column gap-3">
                     {links.map((link) => (
                         <Link
